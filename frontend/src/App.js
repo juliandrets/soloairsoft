@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './img/logo.png';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header>
+          <section className="content">
+            <a href="/"><img src={logo} className="logo" alt="logo" /></a>
+            <form id="search" action="/items" method="GET">
+              <input type="text" name="search" placeholder="Nunca dejes de buscar"/>
+              <button type="submit"><i class="fab fa-searchengin"></i></button>
+            </form>
+            <ul className="header-data">
+              <li><i class="far fa-bell"></i></li>
+              <li><i class="far fa-heart"></i></li>
+              <li className="user-name">Julian <figure></figure></li>
+            </ul>
+          </section>
         </header>
       </div>
     );

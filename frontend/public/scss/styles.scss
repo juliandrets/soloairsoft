@@ -1,0 +1,142 @@
+$primaryColor : #ffbc00;
+$secondColor : #212121;
+$textColor : #999999;
+$buttonColor : #3277ff;
+$maxWidth : 1200px;
+
+body {
+  background-color: #ebebeb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.content {
+  max-width: $maxWidth;
+  margin: 0 auto;
+  overflow: hidden;
+
+  @media (max-width: 1050px) {
+    max-width: 90%;
+  }
+}
+
+input:focus, button:focus{
+	outline:0px;
+}
+button {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: $buttonColor;
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 16px;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  height: 50px;
+  background-color: $secondColor;
+
+  .logo {
+    float: left;
+    width: 150px;
+    margin: 8px 0px 8px 0px;
+  }
+
+  .header-data {
+    height: 50px;
+    float: right;
+    display: flex;
+    align-items: center;
+
+    li {
+      display: inline-block;
+      color: white;
+      font-size: 14px;
+      margin-left: 15px;
+
+      i {
+        font-size: 20px;
+      }
+    }
+    .user-name {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      figure {
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        margin-left: 10px;
+        border-radius: 100px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  #search {
+    max-width: 500px;
+    margin-left: 50px;
+    width: 100%;
+    height: 50px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      max-width: calc(100% - 40px);
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: none;
+      font-size: 15px;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+    button {
+      max-width: 40px;
+      width: 100%;
+      border: none;
+      font-size: 18px;
+      height: 34px;
+      text-align: center;
+      background-color: $primaryColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+
+      i {
+        font-size: 23px;
+        color: white;
+      }
+    }
+  }
+}
+
+main {
+  max-width: $maxWidth;
+  padding-bottom: 50px;
+  margin: 0 auto;
+
+
+}
